@@ -11,7 +11,7 @@ export HF_ENDPOINT=https://hf-mirror.com
 
 # # 开始训练
 # # pretrain
-deepspeed llava/train/train_vMLLM_clip_base.py \
+deepspeed vmllm/train/train_vMLLM_clip_base.py \
     --deepspeed ./scripts/zero2.json \
     --model_name_or_path meta-llama/Meta-Llama-3-8B-Instruct \
     --version plain \
@@ -49,7 +49,7 @@ deepspeed llava/train/train_vMLLM_clip_base.py \
 
 
 # sft
-deepspeed llava/train/train_vMLLM_clip_base.py \
+deepspeed vmllm/train/train_vMLLM_clip_base.py \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path meta-llama/Meta-Llama-3-8B-Instruct \
     --version llama3 \
