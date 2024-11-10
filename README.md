@@ -12,7 +12,9 @@ bash running_script/install_envs.sh
 ```
 
 ## Data preparation
+- The image can be downloaded following the readme.md of following repos:
 please refer to [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main), [MG-LLaVA](https://github.com/PhoenixZ810/MG-LLaVA), and [MGM](https://github.com/dvlab-research/MGM)
+- The merged annotation file can be downloaded from the [vMLLM_data](https://huggingface.co/datasets/xmu-xiaoma666/vMLLM_data/tree/main)
 
 ## Training
 Training using CLIP-base vision encoder:
@@ -34,6 +36,18 @@ Training using SigLIP-SO vision encoder:
 ```
 bash running_script/running_vMLLM_siglip_so.sh
 ```
+
+## Chat Ability
+
+![](images/ability.png)
+
+## Performance
+
+| **Method** | **VE**   | **LLM**         | **Res.** | **MMB** | **MM-Vet** | **MathVista** | **GQA** | **AI2D** | **SQA**$^{I}$ | **Seed**$^{I}$ | **VizWiz** |
+|------------|----------|-----------------|----------|---------|------------|---------------|---------|----------|---------------|---------------|------------|
+| vMLLM      | SigLIP-SO | Vicuna-7B       | 384      | 71.4    | 39.1       | 34.7          | 63.3    | 70.6     | 71.5          | 70.9          | 63.5       |
+| vMLLM      | SigLIP-SO | Vicuna-13B      | 384      | 75.3    | 43.3       | 36.4          | 64.5    | 75.8     | 76.1          | 72.5          | 64.8       |
+| vMLLM      | SigLIP-SO | LLaMA3-8B       | 384      | 77.1    | 43.4       | 41.0          | 65.3    | 77.1     | 75.6          | 74.0          | 65.1       |
 
 ## Model Zoo
 
